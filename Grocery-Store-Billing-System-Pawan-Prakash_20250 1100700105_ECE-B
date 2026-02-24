@@ -1,0 +1,41 @@
+# Grocery-Store-Billing-System-Pawan Prakash_202501100700105_ECE-B
+
+# Initialize total amount
+total = 0
+
+# Loop to accept input for 5 items
+for i in range(1, 6):
+    print(f"\nItem {i}")
+    
+    # Accept price of item
+    price = float(input("Enter price of item: "))
+    
+    # Accept quantity of item
+    quantity = int(input("Enter quantity: "))
+    
+    # Calculate total for this item
+    item_total = price * quantity
+    
+    # Add to overall total
+    total += item_total
+
+# Display original total
+print("\n----- Grocery BILL SUMMARY -----")
+print(f"Original Total: Rs. {total:.2f}")
+
+# Initialize discount
+discount = 0
+
+# Apply 10% discount if total exceeds Rs. 100
+if total > 100:
+    discount = total * 0.10
+    print(f"Discount (10%): Rs. {discount:.2f}")
+else:
+    print("Discount: Rs. 0.00")
+
+# Calculate final payable amount
+final_amount = total - discount
+
+# Display final amount
+print(f"Final Payable Amount: Rs. {final_amount:.2f}")
+print("-------------------------")
